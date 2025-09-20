@@ -1,0 +1,744 @@
+--[[]
+made by screech and
+jessica
+]]
+warn("Thanks for buying man")
+local CF = CFrame.new
+local nicefrane = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+local sussyroom = game:GetObjects("rbxassetid://11626479968")[1]
+sussyroom.Parent = workspace
+wait(2)
+local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
+		local camara = game.Workspace.CurrentCamera
+		local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
+			camara.CFrame = camara.CFrame * shakeCf
+		end)
+		camShake:Start()
+		camShake:ShakeOnce(300,300,0.3,0.5)
+		wait(0.5)
+game.Players.LocalPlayer.Character:PivotTo(CF(game.Workspace.TestCustomRoom.sussy_part.Position))
+game:GetService("Workspace").TestCustomRoom.sussy_part2.Touched:Connect(function()
+game.Players.LocalPlayer.Character:PivotTo(CF(0.352394, -0.3796, 3263.22))
+game.Lighting.MainColorCorrection.TintColor = Color3.fromRGB(255, 147, 15)
+game.Lighting.MainColorCorrection.Contrast = 1
+camShake:ShakeOnce(300,300,0.3,0.5)
+		local TweenService = game:GetService("TweenService")
+		local TW = TweenService:Create(game.Lighting.MainColorCorrection, TweenInfo.new(math.random(2.5,3)),{TintColor = Color3.fromRGB(255, 255, 255)})
+		TW:Play()
+wait(0.3)
+local tween = game:GetService("TweenService")
+tween:Create(game.Lighting.MainColorCorrection, TweenInfo.new(6), {Contrast = 0}):Play()
+end)
+pcall(function()
+spawn(function()
+	while wait() do
+	local currentroomnumber = game:GetService("ReplicatedStorage").GameData.LatestRoom.Value
+		if workspace["CurrentRooms"][currentroomnumber]:FindFirstChild("Door") ~= nil then
+		 if workspace["CurrentRooms"][currentroomnumber]:FindFirstChild("Door"):FindFirstChild("Door") ~= nil then
+			workspace["CurrentRooms"][currentroomnumber]:FindFirstChild("Door"):FindFirstChild("Door").Material = Enum.Material.Slate
+			workspace["CurrentRooms"][currentroomnumber]:FindFirstChild("Door"):FindFirstChild("Door").Color = Color3.new(0.341176, 0.341176, 0.341176)
+		    end
+		end
+	end
+end)
+spawn(function()
+	while wait() do
+	local currentroomnumber = game:GetService("ReplicatedStorage").GameData.LatestRoom.Value
+		if workspace["CurrentRooms"][currentroomnumber]:FindFirstChild("Door") ~= nil then
+		 if workspace["CurrentRooms"][currentroomnumber]:FindFirstChild("Door"):FindFirstChild("Door") ~= nil then
+		 if workspace["CurrentRooms"][currentroomnumber]:FindFirstChild("Door"):FindFirstChild("Door"):FindFirstChild("Sign") ~= nil then
+		 workspace["CurrentRooms"][currentroomnumber]:FindFirstChild("Door").Sign:Destroy()
+		 workspace["CurrentRooms"][currentroomnumber]:FindFirstChild("Door"):FindFirstChild("Door"):FindFirstChild("Sign"):Destroy()
+                end
+		    end
+		end
+	end
+end)
+end)
+workspace["The Damned"]:Play()
+workspace["The Damned"].SoundId = "rbxassetid://9113731836"
+workspace["The Damned"].Pitch = 1
+workspace["The Damned"].Looped = true
+workspace["The Damned"].Volume = 1
+function ambiance()
+	while true do
+		local ambiencefirst = Instance.new("Sound", workspace)
+		ambiencefirst.SoundId = "rbxassetid://12229501"
+		ambiencefirst.Pitch = 0.11
+		ambiencefirst:Play()
+		wait(120)
+	end
+end
+spawn(function()
+firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "balls")
+wait(7.5)
+firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "jiggly ones")
+wait(7.5)
+firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "boogy")
+wait(7.5)
+firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "omgfrfr")
+wait(2)
+end)
+local lightpivot = game:GetObjects((getcustomasset or getsynasset)("LightPivot.rbxm"))[1]
+local light = game:GetObjects((getcustomasset or getsynasset)("Light.rbxm"))[1]
+light.Parent = game.ReplicatedStorage
+lightpivot.Parent = game.ReplicatedStorage
+lightpivot.Transparency = 1
+room = game:GetService("ReplicatedStorage").GameData.LatestRoom.Value
+for i, v in pairs(workspace.CurrentRooms[room].Parts:GetChildren()) do 
+	if v.Name == "Wall" then
+		v.Material = "Limestone"
+		v.Color = Color3.fromRGB(30,30,30)
+			if v:FindFirstChild("Wallpaper") ~= nil then
+			v.Wallpaper:Destroy()
+			end
+	end
+end
+for i, v in pairs(workspace.CurrentRooms[room].Parts.DropCeiling:GetChildren()) do 
+	if v.Name == "Ceiling" then
+		v.Material = "Limestone"
+		v.Color = Color3.fromRGB(86, 86, 86)
+	end
+end
+for i, v in pairs(workspace.CurrentRooms[room].Parts.DropCeiling.Model:GetChildren()) do 
+	v.Material = "Limestone"
+	v.Color = Color3.fromRGB(86, 86, 86)
+end
+for i, r in pairs(workspace.CurrentRooms[room].Assets.Light_Fixtures:GetChildren()) do 
+	if r.Name == "LightStand" then
+		local pivotcloney = game.ReplicatedStorage.Pivot:Clone()
+		pivotcloney.Parent = workspace.CurrentRooms[room]
+		pivotcloney:PivotTo(r.LightFixture.CFrame)
+		pivotcloney.CFrame = pivotcloney.CFrame - Vector3.new(0, 6, 0)
+		pivotcloney.Transparency = 1
+		r:Destroy()
+	end
+end
+for i, r in pairs(workspace.CurrentRooms[room]:GetChildren()) do 
+	if r.Name == "Pivot" then
+		local copylight = Game.ReplicatedStorage.IndustrialLight:Clone()
+		copylight.Parent = workspace.CurrentRooms[room]
+		copylight:PivotTo(r.CFrame)
+	end
+end
+for i, r in pairs(workspace.CurrentRooms[room].Assets:GetChildren()) do 
+	if r.Name == "Chandelier" then
+		r:Destroy()
+	end
+end
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
+local lightpivot = game:GetObjects((getcustomasset or getsynasset)("LightPivot.rbxm"))[1]
+local light = game:GetObjects((getcustomasset or getsynasset)("Light.rbxm"))[1]
+	light.Parent = game.ReplicatedStorage
+	lightpivot.Parent = game.ReplicatedStorage
+	lightpivot.Transparency = 1
+	room = game:GetService("ReplicatedStorage").GameData.LatestRoom.Value
+	for i, v in pairs(workspace.CurrentRooms[room].Parts:GetChildren()) do 
+		if v.Name == "Wall" then
+			v.Material = "Limestone"
+			v.Color = Color3.fromRGB(86, 86, 86)
+			if v:FindFirstChild("Wallpaper") ~= nil then
+			v.Wallpaper:Destroy()
+			end
+		end
+	end
+	for i, v in pairs(workspace.CurrentRooms[room].Parts.DropCeiling:GetChildren()) do 
+		if v.Name == "Ceiling" then
+			v.Material = "Limestone"
+			v.Color = Color3.fromRGB(86, 86, 86)
+		end
+	end
+	for i, v in pairs(workspace.CurrentRooms[room].Parts.DropCeiling.Model:GetChildren()) do 
+		v.Material = "Limestone"
+		v.Color = Color3.fromRGB(86, 86, 86)
+	end
+	for i, r in pairs(workspace.CurrentRooms[room].Assets.Light_Fixtures:GetChildren()) do 
+		if r.Name == "LightStand" then
+			local pivotcloney = game.ReplicatedStorage.Pivot:Clone()
+			pivotcloney.Parent = workspace.CurrentRooms[room]
+			pivotcloney:PivotTo(r.LightFixture.CFrame)
+			pivotcloney.CFrame = pivotcloney.CFrame - Vector3.new(0, 6, 0)
+			r:Destroy()
+		end
+	end
+	for i, r in pairs(workspace.CurrentRooms[room]:GetChildren()) do 
+		if r.Name == "Pivot" then
+			local copylight = Game.ReplicatedStorage.IndustrialLight:Clone()
+			copylight.Parent = workspace.CurrentRooms[room]
+			copylight:PivotTo(r.CFrame)
+			workspace.Ambience_Dark.Played:Connect(function()
+				for i, r in pairs(workspace.CurrentRooms[room]:GetChildren()) do 
+					if r.Name == "IndustrialLight" then
+						r:Destroy()
+					end
+				end
+			end)
+		end
+	end
+	for i, r in pairs(workspace.CurrentRooms[room].Assets:GetChildren()) do 
+		if r.Name == "Chandelier" then
+			r:Destroy()
+		end
+	end
+	local chancebreak = math.random(1,20)
+	local chancea60 = math.random(1,30)
+	local chancecrucifix = math.random(1,15)
+	local chancemonoxide = math.random(1,60)
+	local chanceatomic = math.random(1,60)
+    local chancedepth = math.random(1,30)
+    if chancedepth == 30 then
+        local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/Johnny39871/assets/main/booo"))()
+
+		-- Create entity
+		local entity = Creator.createEntity({
+			CustomName = "Depth", -- Custom name of your entity
+			Model = "https://github.com/Johnny39871/assets/blob/main/depth.rbxm?raw=true", -- Can be GitHub file or rbxassetid
+			Speed = 800, -- Percentage, 100 = default Rush speed
+			DelayTime = 2, -- Time before starting cycles (seconds)
+			HeightOffset = 0,
+			CanKill = true,
+			KillRange = 30,
+			BreakLights = true,
+			BackwardsMovement = false,
+			FlickerLights = {
+				false, -- Enabled/Disabled
+				1, -- Time (seconds)
+			},
+			Cycles = {
+				Min = 2,
+				Max = 5,
+				WaitTime = 0,
+			},
+			CamShake = {
+				true, -- Enabled/Disabled
+				{500, 500, 0.1, 1}, -- Shake values (don't change if you don't know)
+				50, -- Shake start distance (from Entity to you)
+			},
+			Jumpscare = {
+				false, -- Enabled/Disabled
+				{
+					Image1 = "rbxassetid://11131703032", -- Image1 url
+					Image2 = "rbxassetid://3413871766", -- Image2 url
+					Shake = true,
+					Sound1 = {
+						10483790459, -- SoundId
+						{ Volume = 2, Pitch = 0.3}, -- Sound properties
+					},
+					Sound2 = {
+						3537873683, -- SoundId
+						{ Volume = 0.5 }, -- Sound properties
+					},
+					Flashing = {
+						true, -- Enabled/Disabled
+						Color3.fromRGB(255,0,0), -- Color
+					},
+					Tease = {
+						true, -- Enabled/Disabled
+						Min = 1,
+						Max = 3,
+					},
+				},
+			},
+			CustomDialog = {"You died to Depth...", "He is 8 times faster than Rush.", "Use what you have learned from Ambush!"}, -- Custom death message
+		})
+
+		-----[[ Advanced ]]-----
+		entity.Debug.OnEntitySpawned = function(entityTable)
+			print("Entity has spawned:", entityTable.Model)
+            game.Lighting.MainColorCorrection.TintColor = Color3.fromRGB(38, 0, 255)
+            			local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
+			local camara = game.Workspace.CurrentCamera
+			local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
+				camara.CFrame = camara.CFrame * shakeCf
+			end)
+			camShake:Start()
+			camShake:ShakeOnce(100,100,1,0.4)
+		end
+
+		entity.Debug.OnEntityDespawned = function(entityTable)
+        spawn(function()
+        local TweenService = game:GetService("TweenService")
+            	local TW = TweenService:Create(game.Lighting.MainColorCorrection, TweenInfo.new(0.5),{TintColor = Color3.fromRGB(255, 255, 255)})
+		TW:Play()
+        end)
+			print("Entity has despawned:", entityTable.Model)
+			local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
+			local camara = game.Workspace.CurrentCamera
+			local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
+				camara.CFrame = camara.CFrame * shakeCf
+			end)
+			camShake:Start()
+			camShake:ShakeOnce(100,4,0.05,0.4)
+		end
+
+		entity.Debug.OnEntityStartMoving = function(entityTable)
+			print("Entity has started moving:", entityTable.Model)
+		end
+
+		entity.Debug.OnEntityFinishedRebound = function(entityTable)
+			print("Entity has finished rebound:", entityTable.Model)
+		end
+
+		entity.Debug.OnEntityEnteredRoom = function(entityTable, room)
+			print("Entity:", entityTable.Model, "has entered room:", room)
+		end
+
+		entity.Debug.OnLookAtEntity = function(entityTable)
+			print("Player has looked at entity:", entityTable.Model)
+		end
+
+		entity.Debug.OnDeath = function(entityTable)
+		end
+		------------------------
+
+		-- Run the created entity
+		Creator.runEntity(entity)
+    end
+	if chancecrucifix == 10 then
+     if game.Players.LocalPlayer.Backpack:FindFirstChild("Crucifix") or game.Players.LocalPlayer.Character:FindFirstChild("Crucifix") then
+         print("no beaches")
+	        else
+	            print("HOHOHO MERYRY CHRISTMAS")
+	            firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "How did I get that?")
+	            
+local shadow = game:GetObjects((getcustomasset or getsynasset)("whofarted.rbxm"))[1]
+shadow.Parent = game.Players.LocalPlayer.Backpack
+local Players = game:GetService("Players")
+local Plr = Players.LocalPlayer
+local Char = Plr.Character or Plr.CharacterAdded:Wait()
+local Hum = Char:WaitForChild("Humanoid")
+local RightArm = Char:WaitForChild("RightUpperArm")
+local LeftArm = Char:WaitForChild("LeftUpperArm")
+local RightC1 = RightArm.RightShoulder.C1
+local LeftC1 = LeftArm.LeftShoulder.C1
+        local function setupCrucifix(tool)
+        RightArm.Name = "R_Arm"
+        LeftArm.Name = "L_Arm"
+        
+        RightArm.RightShoulder.C1 = RightC1 * CFrame.Angles(math.rad(-90), math.rad(-15), 0)
+        LeftArm.LeftShoulder.C1 = LeftC1 * CFrame.new(-0.2, -0.3, -0.5) * CFrame.Angles(math.rad(-125), math.rad(25), math.rad(25))
+        for _, v in next, Hum:GetPlayingAnimationTracks() do
+            v:Stop()
+        end
+        end
+shadow.Equipped:Connect(function()
+setupCrucifix(shadow)
+game.Players.LocalPlayer:SetAttribute("Hidden", true)
+end)
+ 
+shadow.Unequipped:Connect(function()
+    game.Players.LocalPlayer:SetAttribute("Hidden", false)
+        RightArm.Name = "RightUpperArm"
+        LeftArm.Name = "LeftUpperArm"
+        
+        RightArm.RightShoulder.C1 = RightC1
+        LeftArm.LeftShoulder.C1 = LeftC1
+end)
+
+	   end
+	end
+	if chancebreak == 20 then 
+		local buzzbuzz = Instance.new("Sound", workspace)
+		buzzbuzz.SoundId = "rbxassetid://9065112164"
+		buzzbuzz:Play()
+		buzzbuzz.Volume = 0
+		local tween = game:GetService("TweenService")
+		tween:Create(game.Lighting.MainColorCorrection, TweenInfo.new(1), {Contrast = 0.3}):Play()
+		local TweenService = game:GetService("TweenService")
+		local TW = TweenService:Create(buzzbuzz, TweenInfo.new(1),{Volume = 3})
+		TW:Play()
+		local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
+		local camara = game.Workspace.CurrentCamera
+		local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
+			camara.CFrame = camara.CFrame * shakeCf
+		end)
+		camShake:Start()
+		camShake:ShakeOnce(30,3,1,0.5)
+		wait(0.7)
+		workspace.Ambience_Dark:Play()
+		workspace.Ambience_Dark.Pitch = 1.3
+		wait(0.4)
+		buzzbuzz:Destroy()
+		local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
+		local camara = game.Workspace.CurrentCamera
+		local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
+			camara.CFrame = camara.CFrame * shakeCf
+		end)
+		local camara = game.Workspace.CurrentCamera
+		local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
+			camara.CFrame = camara.CFrame * shakeCf
+		end)
+		camShake:Start()
+		camShake:ShakeOnce(40,40,0.5,0.5)
+		firesignal(game.ReplicatedStorage.Bricks.UseEventModule.OnClientEvent, "breakLights", workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value], 0.416, 60) 
+		game.Lighting.Ambient = Color3.fromRGB(20,20,20)
+		game.Lighting.MainColorCorrection.Contrast = 0
+	else
+	end
+	if chancea60 == 26 then
+		firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "I NEED TO HIDE!")
+		game.Lighting.MainColorCorrection.TintColor = Color3.fromRGB(255,0,0)
+		game.Lighting.MainColorCorrection.Contrast = 1
+		firesignal(game.ReplicatedStorage.Bricks.UseEventModule.OnClientEvent, "flickerLights", game.ReplicatedStorage.GameData.LatestRoom.Value, 4) 
+		local tween = game:GetService("TweenService")
+		tween:Create(game.Lighting.MainColorCorrection, TweenInfo.new(6), {Contrast = 0}):Play()
+		local TweenService = game:GetService("TweenService")
+		local TW = TweenService:Create(game.Lighting.MainColorCorrection, TweenInfo.new(6),{TintColor = Color3.fromRGB(255, 255, 255)})
+		TW:Play()
+		local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
+		local camara = game.Workspace.CurrentCamera
+		local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
+			camara.CFrame = camara.CFrame * shakeCf
+		end)
+		camShake:Start()
+		camShake:ShakeOnce(2,3.5,3,0.5)
+		local rageentrance=game:GetObjects("rbxassetid://11622454498")[1]
+		rageentrance.Parent = workspace
+		rageentrance.Pitch = 1
+		wait(3)
+		local TW = TweenService:Create(rageentrance, TweenInfo.new(1),{Pitch = 0})
+		TW:Play()
+		wait(1)
+		rageentrance:Stop()
+		local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+		-- Create entity
+		local entity = Creator.createEntity({
+			CustomName = "A-60", -- Custom name of your entity
+			Model = "https://github.com/Johnny39871/assets/blob/main/A-60%20refined.rbxm?raw=true", -- Can be GitHub file or rbxassetid
+			Speed = 500, -- Percentage, 100 = default Rush speed
+			DelayTime = 2, -- Time before starting cycles (seconds)
+			HeightOffset = 0,
+			CanKill = true,
+			KillRange = 30,
+			BreakLights = true,
+			BackwardsMovement = false,
+			FlickerLights = {
+				false, -- Enabled/Disabled
+				1, -- Time (seconds)
+			},
+			Cycles = {
+				Min = 1,
+				Max = 3,
+				WaitTime = 0,
+			},
+			CamShake = {
+				true, -- Enabled/Disabled
+				{3.5, 20, 0.1, 1}, -- Shake values (don't change if you don't know)
+				200, -- Shake start distance (from Entity to you)
+			},
+			Jumpscare = {
+				false, -- Enabled/Disabled
+				{
+					Image1 = "rbxassetid://11131703032", -- Image1 url
+					Image2 = "rbxassetid://3413871766", -- Image2 url
+					Shake = true,
+					Sound1 = {
+						10483790459, -- SoundId
+						{ Volume = 2, Pitch = 0.3}, -- Sound properties
+					},
+					Sound2 = {
+						3537873683, -- SoundId
+						{ Volume = 0.5 }, -- Sound properties
+					},
+					Flashing = {
+						true, -- Enabled/Disabled
+						Color3.fromRGB(255,0,0), -- Color
+					},
+					Tease = {
+						true, -- Enabled/Disabled
+						Min = 1,
+						Max = 3,
+					},
+				},
+			},
+			CustomDialog = {"You died to A-60...", "He makes his presence known.", "Use that to your advantage!"}, -- Custom death message
+		})
+
+		-----[[ Advanced ]]-----
+		entity.Debug.OnEntitySpawned = function(entityTable)
+			print("Entity has spawned:", entityTable.Model)
+		end
+
+		entity.Debug.OnEntityDespawned = function(entityTable)
+			print("Entity has despawned:", entityTable.Model)
+			local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
+			local camara = game.Workspace.CurrentCamera
+			local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
+				camara.CFrame = camara.CFrame * shakeCf
+			end)
+			camShake:Start()
+			camShake:ShakeOnce(100,4,0.4,0.4)
+			local sound = Instance.new("Sound", workspace)
+			sound.SoundId = "rbxassetid://3908308607"
+			sound:Play()
+			sound.Volume = 5
+			rageentrance:Destroy()
+			wait(2)
+			sound:Destroy()
+		end
+
+		entity.Debug.OnEntityStartMoving = function(entityTable)
+			print("Entity has started moving:", entityTable.Model)
+		end
+
+		entity.Debug.OnEntityFinishedRebound = function(entityTable)
+			print("Entity has finished rebound:", entityTable.Model)
+		end
+
+		entity.Debug.OnEntityEnteredRoom = function(entityTable, room)
+			print("Entity:", entityTable.Model, "has entered room:", room)
+		end
+
+		entity.Debug.OnLookAtEntity = function(entityTable)
+			print("Player has looked at entity:", entityTable.Model)
+		end
+
+		entity.Debug.OnDeath = function(entityTable)
+			warn("Player has died.")
+			local shadow=game:GetObjects("rbxassetid://11503625408")[1]
+			local gui = Instance.new("ScreenGui",game.Players.LocalPlayer.PlayerGui)
+			shadow.Parent = gui
+			shadow.Visible = true
+			local l__ImageLabel__1 = shadow.ImageLabel;
+			local v2 = Random.new();
+			local l__SizeValue__3 = shadow.SizeValue;
+			local v4 = math.random(1, 6);
+			if v4 == 1 then
+				l__ImageLabel__1.Image = "rbxassetid://11131703032";
+			end;
+			if v4 == 2 then
+				l__ImageLabel__1.Image = "rbxassetid://1972219024";
+			end;
+			if v4 == 3 then
+				l__ImageLabel__1.Image = "rbxassetid://1822114127";
+			end;
+			if v4 == 4 then
+				l__ImageLabel__1.Image = "rbxassetid://3413871766";
+			end;
+			if v4 == 5 then
+				l__ImageLabel__1.Image = "rbxassetid://3354536350";
+			end;
+			if v4 == 6 then
+				l__ImageLabel__1.Image = "rbxassetid://11131699495";
+			end;
+			shadow.Jumpscare:Play();
+			for v5 = 1, 25 do
+				local v6 = math.random(1, 3);
+				if v6 == 1 then
+					shadow.BackgroundColor3 = Color3.new(0, 0, 0);
+					l__ImageLabel__1.ImageColor3 = Color3.new(1, 1, 1);
+				end;
+				if v6 == 2 then
+					shadow.BackgroundColor3 = Color3.new(1, 0, 0);
+					l__ImageLabel__1.ImageColor3 = Color3.new(0, 0, 0);
+				end;
+				if v6 == 3 then
+					shadow.BackgroundColor3 = Color3.new(0.666667, 0, 0);
+					l__ImageLabel__1.ImageColor3 = Color3.new(1, 0, 0);
+				end;
+				l__ImageLabel__1.Position = UDim2.new(v2:NextNumber(0.4, 0.6), 0, v2:NextNumber(0.45, 0.55), 0);
+				l__ImageLabel__1.Size = l__ImageLabel__1.Size + UDim2.new(l__SizeValue__3.Value, 0, l__SizeValue__3.Value, 0);
+				l__ImageLabel__1.Rotation = math.random(-10, 10);
+				l__SizeValue__3.Value = l__SizeValue__3.Value - 0.01;
+				wait(0);
+			end;
+			l__ImageLabel__1.ImageColor3 = Color3.new(1, 1, 1);
+			shadow.BackgroundColor3 = Color3.new(0, 0, 0);
+			shadow.Visible = false;
+			shadow.Jumpscare:Stop()
+
+		end
+		------------------------
+
+		-- Run the created entity
+		Creator.runEntity(entity)  
+	end
+	-- disabled rn
+	if chancemonoxide == false then
+		game.Lighting.MainColorCorrection.TintColor = Color3.fromRGB(0,0,255)
+		game.Lighting.MainColorCorrection.Contrast = 1
+		firesignal(game.ReplicatedStorage.Bricks.UseEventModule.OnClientEvent, "flickerLights", game.ReplicatedStorage.GameData.LatestRoom.Value, 1) 
+		local tween = game:GetService("TweenService")
+		tween:Create(game.Lighting.MainColorCorrection, TweenInfo.new(1), {Contrast = 0}):Play()
+		local TweenService = game:GetService("TweenService")
+		local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
+		local camara = game.Workspace.CurrentCamera
+		local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
+			camara.CFrame = camara.CFrame * shakeCf
+		end)
+		camShake:Start()
+		camShake:ShakeOnce(30,70,1,1)
+		local rageentrance=game:GetObjects("rbxassetid://11556536863")[1]
+		rageentrance.Parent = workspace
+		rageentrance.Pitch = 1
+		wait(1)
+		local TW = TweenService:Create(rageentrance, TweenInfo.new(1),{Pitch = 0})
+		TW:Play()
+		local TW = TweenService:Create(game.Lighting.MainColorCorrection, TweenInfo.new(1),{TintColor = Color3.fromRGB(255, 255, 255)})
+		TW:Play()
+		wait(1)
+		rageentrance:Stop()
+		local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/Johnny39871/assets/main/booo"))()
+
+		-- Create entity
+		local entity = Creator.createEntity({
+			CustomName = "Monoxide", -- Custom name of your entity
+			Model = "https://github.com/Johnny39871/assets/blob/main/Monoxide.rbxm?raw=true", -- Can be GitHub file or rbxassetid
+			Speed = 800, -- Percentage, 100 = default Rush speed
+			DelayTime = 2, -- Time before starting cycles (seconds)
+			HeightOffset = 0,
+			CanKill = true,
+			KillRange = 100,
+			BreakLights = true,
+			BackwardsMovement = false,
+			FlickerLights = {
+				false, -- Enabled/Disabled
+				1, -- Time (seconds)
+			},
+			Cycles = {
+				Min = 5,
+				Max = 10,
+				WaitTime = 5,
+			},
+			CamShake = {
+				true, -- Enabled/Disabled
+				{10, 20, 0.2, 1}, -- Shake values (don't change if you don't know)
+				70, -- Shake start distance (from Entity to you)
+			},
+			Jumpscare = {
+				false, -- Enabled/Disabled
+				{
+					Image1 = "rbxassetid://11131703032", -- Image1 url
+					Image2 = "rbxassetid://3413871766", -- Image2 url
+					Shake = true,
+					Sound1 = {
+						10483790459, -- SoundId
+						{ Volume = 2, Pitch = 0.3}, -- Sound properties
+					},
+					Sound2 = {
+						3537873683, -- SoundId
+						{ Volume = 0.5 }, -- Sound properties
+					},
+					Flashing = {
+						true, -- Enabled/Disabled
+						Color3.fromRGB(255,0,0), -- Color
+					},
+					Tease = {
+						true, -- Enabled/Disabled
+						Min = 1,
+						Max = 3,
+					},
+				},
+			},
+			CustomDialog = {"You died to Monoxide...", "It is a tricky one.", "Use what you have learnt from A-60!"}, -- Custom death message
+		})
+
+		-----[[ Advanced ]]-----
+		entity.Debug.OnEntitySpawned = function(entityTable)
+			print("Entity has spawned:", entityTable.Model)
+		end
+
+		entity.Debug.OnEntityDespawned = function(entityTable)
+			print("Entity has despawned:", entityTable.Model)
+			local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
+			local camara = game.Workspace.CurrentCamera
+			local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
+				camara.CFrame = camara.CFrame * shakeCf
+			end)
+			camShake:Start()
+			camShake:ShakeOnce(100,4,0.4,0.4)
+			local sound = Instance.new("Sound", workspace)
+			sound.SoundId = "rbxassetid://3908308607"
+			sound:Play()
+			sound.Volume = 5
+			rageentrance:Destroy()
+			wait(2)
+			sound:Destroy()
+		end
+
+		entity.Debug.OnEntityStartMoving = function(entityTable)
+			print("Entity has started moving:", entityTable.Model)
+		end
+
+		entity.Debug.OnEntityFinishedRebound = function(entityTable)
+			print("Entity has finished rebound:", entityTable.Model)
+		end
+
+		entity.Debug.OnEntityEnteredRoom = function(entityTable, room)
+			print("Entity:", entityTable.Model, "has entered room:", room)
+		end
+
+		entity.Debug.OnLookAtEntity = function(entityTable)
+			print("Player has looked at entity:", entityTable.Model)
+		end
+
+		entity.Debug.OnDeath = function(entityTable)
+			warn("Player has died.")
+			local shadow=game:GetObjects("rbxassetid://11514979094")[1]
+			local gui = Instance.new("ScreenGui",game.Players.LocalPlayer.PlayerGui)
+			shadow.Parent = gui
+			shadow.Visible = true
+			local l__ImageLabel__1 = shadow.ImageLabel;
+			local v2 = Random.new();
+			local l__SizeValue__3 = shadow.SizeValue;
+			wait(1);
+			shadow.Jumpscare:Play();
+			for v4 = 1, 22 do
+				local v5 = math.random(1, 3);
+				if v5 == 1 then
+					shadow.BackgroundColor3 = Color3.new(0, 0, 0);
+					l__ImageLabel__1.ImageColor3 = Color3.new(1, 1, 1);
+				end;
+				if v5 == 2 then
+					shadow.BackgroundColor3 = Color3.new(0, 1, 1);
+					l__ImageLabel__1.ImageColor3 = Color3.new(0, 0, 0);
+				end;
+				if v5 == 3 then
+					shadow.BackgroundColor3 = Color3.new(0, 0, 0.498039);
+					l__ImageLabel__1.ImageColor3 = Color3.new(0, 0, 1);
+				end;
+				l__ImageLabel__1.Position = UDim2.new(v2:NextNumber(0.35, 0.65), 0, v2:NextNumber(0.35, 0.65), 0);
+				l__ImageLabel__1.Size = l__ImageLabel__1.Size + UDim2.new(l__SizeValue__3.Value, 0, l__SizeValue__3.Value, 0);
+				l__ImageLabel__1.Rotation = math.random(-30, 30);
+				l__SizeValue__3.Value = l__SizeValue__3.Value + 0.01;
+				wait(0);
+			end;
+			l__ImageLabel__1.ImageColor3 = Color3.new(1, 1, 1);
+			shadow.BackgroundColor3 = Color3.new(0, 0, 0);
+			shadow.Visible = false;
+			gui:Destroy()
+
+		end
+		------------------------
+
+		-- Run the created entity
+		Creator.runEntity(entity)
+	end
+end)
+workspace.ChildAdded:Connect(function(seek)
+	if seek.Name == "SeekMoving" then
+		firesignal(game.ReplicatedStorage.Bricks.Caption.OnClientEvent, "I feel like im being watched...")
+		wait(0.5)
+		seek.SeekRig.Head.Eye.Decal.Texture = "rbxassetid://11523633591"
+		seek.Figure.Scream.SoundId = "rbxassetid://9113985604"
+		seek.Figure.Scream.Pitch = 0.8
+		workspace.Ambience_Seek.SoundId = "rbxassetid://9046421438"
+		seek.Figure.Scream.RollOffMaxDistance = 10000
+		seek.Figure.Scream.RollOffMinDistance = 10
+		seek.SeekRig.LeftLowerArm.Color = Color3.new(1,0,0)
+		seek.SeekRig.LeftLowerArm.Material = "Neon"
+		seek.SeekRig.RightLowerLeg.Color = Color3.new(1,0,0)
+		seek.SeekRig.RightLowerLeg.Material = "Neon"
+		seek.SeekRig.RightUpperArm.Color = Color3.new(1,0,0)
+		seek.SeekRig.RightUpperArm.Material = "Neon"
+		local eye1 = game:GetObjects("rbxassetid://11574477069")[1]
+		eye1.Parent = seek.SeekRig.Head
+		local weldingconstraint = Instance.new("WeldConstraint", seek.SeekRig.Head)
+		eye1:PivotTo(seek.SeekRig.Head.CFrame)
+		weldingconstraint.Part0 = seek.SeekRig.Head
+		weldingconstraint.Part1 = eye1.Part
+	else
+
+	end
+end)
