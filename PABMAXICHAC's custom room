@@ -1,0 +1,50 @@
+
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
+local lastroom = game:GetService("ReplicatedStorage").GameData.LatestRoom.Value
+local steps = game:GetService("Workspace").CurrentRooms[lastroom].Parts:FindFirstChild("Steps")
+local fakedoor = game:GetService("Workspace").CurrentRooms[lastroom]:FindFirstChild("FakeDoor_Hotel")
+
+
+if fakedoor == nil then
+print("fakedoor not found")
+end
+--
+
+
+if fakedoor then
+if steps then
+
+
+
+-- Load the Functions module
+local SelfModules = {
+    Functions = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Functions.lua"))(),
+}
+ 
+-- Load a custom instance model from a URL or local file
+local customRoom = SelfModules.Functions.LoadCustomInstance("https://github.com/PABMAXICHAC/doors-monsters-models/blob/main/customrooma.rbxm?raw=true")
+customRoom.Parent = game.Workspace.CurrentRooms[lastroom]
+
+--
+--after
+
+local model = game:GetService("Workspace").CurrentRooms[lastroom].custom
+
+local otherModel = game:GetService("Workspace").CurrentRooms[lastroom].FakeDoor_Hotel
+local newCFrame = otherModel:GetPrimaryPartCFrame()
+
+model:SetPrimaryPartCFrame(newCFrame)
+
+local ctCFrame = model:GetPrimaryPartCFrame()
+local reversedCFrame = ctCFrame * CFrame.new(0, 0, 0, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+
+model:SetPrimaryPartCFrame(reversedCFrame)
+--
+game:GetService("Workspace").CurrentRooms[lastroom].FakeDoor_Hotel:Destroy()
+end
+end
+--
+loadstring(game:HttpGet("https://github.com/PABMAXICHAC/doors-monsters-models/raw/main/customroom_prompts.lua"))()
+--
+end)
+--
