@@ -44,7 +44,7 @@ game:GetService("Workspace").CurrentRooms[lastroom].FakeDoor_Hotel:Destroy()
 end
 end
 --
-loadstring(game:HttpGet("https://github.com/PABMAXICHAC/doors-monsters-models/raw/main/customroom_prompts.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Anctarus7105/Random-Files/refs/heads/main/CustomroomPromptsFixed.lua"))()
 --
 end)
 --
